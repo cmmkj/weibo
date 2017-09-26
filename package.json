@@ -1,0 +1,31 @@
+{
+  "name": "weibo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch app.js --watch routes --watch lib app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^2.4.0",
+    "knex": "^0.12.6",
+    "koa": "^1.2.4",
+    "koa-body": "^1.6.0",
+    "koa-compress": "^1.0.9",
+    "koa-etag": "^2.1.1",
+    "koa-generic-session": "^1.11.3",
+    "koa-passport": "^1.4.0",
+    "koa-redis": "^2.1.2",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "mysql": "^2.12.0",
+    "passport": "^0.4.0",
+    "passport-weibo": "^0.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
