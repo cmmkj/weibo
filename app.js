@@ -23,6 +23,7 @@ app.use(session({
   store: redisStore({client: redis}),
   prefix: 'test:user:sess:', 
   cookie: {
+    signed: false,
     maxage: 24 * 60 * 60
   }
 }))

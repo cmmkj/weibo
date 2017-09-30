@@ -24,10 +24,13 @@ router.get('/', function* (next) {
 
 router.get('/weiboSuccess', User.weiboSuccess)
 router.get('/auth/weibo', passport.authenticate('weibo'))
-router.get('/auth/weibo/callback', passport.authenticate('weibo', {
-  successRedirect: '/weiboSuccess',
-  failureRedirect: '/'
-}))
+router.get('/auth/weibo/callback', function* (next) {
+  console.log('@@@@@@@@@@@')
+  console.log('@@@@@@@@@@@')
+  console.log('@@@@@@@@@@@')
+  console.log(this.session)
+  this.body = '恭喜你,微博授权成功'
+})
 
 module.exports = router
 
